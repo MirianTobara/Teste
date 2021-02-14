@@ -23,7 +23,7 @@ public class DtoUser {
 		DtoUser userDto = new DtoUser();
 		userDto.setId(1);
 		
-		userDto.setUsername(firstName.concat(lastName));
+		userDto.setUsername(firstName.concat(lastName).toLowerCase());
 		userDto.setFirstName(firstName);
 		userDto.setLastName(lastName);
 		

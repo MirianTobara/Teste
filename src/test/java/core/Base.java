@@ -32,18 +32,18 @@ public class Base implements Constants  {
 	public void realizarPost(Object request, String endpoint) {
 		given()
 			.body(request)
-		.when()
+		.when().log().all()
 			.post(endpoint)
 		.then()
-			.statusCode(200).log().everything();
+			.statusCode(200).log().all();
 	}
 	
 	public ValidatableResponse realizarGet(String endpoint) {
 		return given()
-		.when()
+		.when().log().all()
 			.get(endpoint)
 		.then()
-			.statusCode(200).log().everything();
+			.statusCode(200).log().all();
 	}
 	
 }
