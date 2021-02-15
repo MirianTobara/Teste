@@ -10,6 +10,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.response.ValidatableResponse;
 
+
 public class Base implements Constants  {
 	
 	@BeforeClass

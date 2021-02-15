@@ -3,6 +3,8 @@ package dto;
 public enum OrderStatus {
 
 	PLACED,
-	DELIVERED;
 
+	APPROVED,
+
+	DELIVERED;
 }
