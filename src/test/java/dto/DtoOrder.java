@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 public class DtoOrder {
 	
 	
+	private int idOrdem;
 	private int id;
 	private int petId;
 	private int quantity;
@@ -12,7 +13,7 @@ public class DtoOrder {
 	private String status;
 	private boolean complete;
 	
-	public DtoOrder(int id, int petId, int quantity, String shipDate, String status, boolean complete) {
+	public DtoOrder(int idOrdem, int id, int petId, int quantity, String shipDate, String status, boolean complete) {
 		super();
 		this.id = id;
 		this.petId = petId;
@@ -20,9 +21,18 @@ public class DtoOrder {
 		this.shipDate = shipDate;
 		this.status = status;
 		this.complete = complete;
+		this.idOrdem = idOrdem;
 	}
 	
-	public DtoOrder(int id, int petId, String status) {
+	public int getIdOrdem() {
+		return idOrdem;
+	}
+
+	public void setIdOrdem(int idOrdem) {
+		this.idOrdem = idOrdem;
+	}
+
+	public DtoOrder(int idOrdem, int id, int petId, String status) {
 		this.id = id;
 		this.petId = petId;
 		this.quantity = 1;

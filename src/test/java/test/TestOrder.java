@@ -18,7 +18,7 @@ public class TestOrder extends core.Base {
 	public void TesteA3VendePet() {
 		System.out.println("Exercicio A - 3");
 		
-		order = new DtoOrder(1,1, OrderStatus.PLACED.name().toLowerCase());
+		order = new DtoOrder(1,1,1, OrderStatus.PLACED.name().toLowerCase());
 		realizarPost(order, "/store/order");
 
 	}
@@ -26,7 +26,7 @@ public class TestOrder extends core.Base {
 	@Test
 	public void TesteA4AtualizaVenda () {
 		System.out.println("Exercicio A - 4");
-		order = new DtoOrder(1,1, OrderStatus.DELIVERED.name().toLowerCase());
+		order = new DtoOrder(1,1,1, OrderStatus.DELIVERED.name().toLowerCase());
 		realizarPost(order, "/store/order");
 		
 	}
@@ -44,6 +44,8 @@ public class TestOrder extends core.Base {
 			.body("petId", equalTo(1));
 
 	}
+	
+	
 	
 	
 	

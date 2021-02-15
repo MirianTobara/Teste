@@ -19,9 +19,9 @@ public class DtoUser {
 	
 	private int userStatus;
 
-	public DtoUser criarUser(String firstName, String lastName) {
+	public DtoUser criarUser(int id,   String firstName, String lastName) {
 		DtoUser userDto = new DtoUser();
-		userDto.setId(1);
+		userDto.setId(id);
 		
 		userDto.setUsername(firstName.concat(lastName).toLowerCase());
 		userDto.setFirstName(firstName);
